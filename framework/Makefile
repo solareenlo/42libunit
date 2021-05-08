@@ -1,7 +1,17 @@
+# Makefile for philo_one, updated Sat May  8 23:24:19 JST 2021
+
+SRC := libunit.c
+OBJ := libunit.o
+
+HDR := libunit.h
+
+# DO NOT ADD OR MODIFY ANY LINES ABOVE THIS -- run 'make source' to add files
+
 NAME := libunit.a
 
 CC := gcc
 CFLAGS := -Wall -Wextra -Werror -g -fsanitize=address
+LIB := ar -rcs
 RM := rm -fr
 
 SRC_DIR := ./
@@ -14,16 +24,12 @@ all: $(NAME)
 
 # Linking
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(LIB) $@ $^
 
 # Compiling
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
-
-.PHONY: thread
-thread: CFLAGS += -g -fsanitize=thread
-thread: re
 
 .PHONY: leak
 leak: CFLAGS += -g -fsanitize=leak
