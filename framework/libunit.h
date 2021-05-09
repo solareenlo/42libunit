@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:14:35 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 20:30:42 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/09 21:07:10 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct s_list_ut
 
 int			launch_tests(t_list_ut **testlist);
 void		ut_putstr_status(char *name, char *res);
+int			ut_putstr_err(char *s);
 
 t_list_ut	*ut_lstnew(char *name, int (*func)(void));
 t_list_ut	*ut_lstlast(t_list_ut *lst);
@@ -40,8 +41,7 @@ void		ut_lstclear(t_list_ut **lst);
 size_t		ut_strlen(char *s);
 void		ut_putchar_fd(char c, int fd);
 void		ut_putstr_fd(char *s, int fd);
-void		ut_putendl_fd(char *s, int fd);
-int			ut_putstr_err(char *s);
+void		ut_putnbr_fd(int n, int fd);
 int			ut_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif

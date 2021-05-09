@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ut_libft1.c                                        :+:      :+:    :+:   */
+/*   ut_libft.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:21:08 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 20:33:45 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/09 21:06:11 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,11 @@ size_t	ut_strlen(char *s)
 	return (i);
 }
 
-void	ut_putchar_fd(char c, int fd)
-{
-	if (!c || fd < 0)
-		return ;
-	write(fd, &c, 1);
-}
-
 void	ut_putstr_fd(char *s, int fd)
 {
 	if (!s || fd < 0)
 		return ;
 	write(fd, s, ut_strlen(s));
-}
-
-void	ut_putendl_fd(char *s, int fd)
-{
-	if (!s || fd < 0)
-		return ;
-	ut_putstr_fd(s, fd);
-	ut_putchar_fd('\n', fd);
 }
 
 int	ut_strncmp(const char *s1, const char *s2, size_t n)
@@ -61,4 +46,29 @@ int	ut_strncmp(const char *s1, const char *s2, size_t n)
 			return (0);
 	}
 	return (0);
+}
+
+void	ut_putchar_fd(char c, int fd)
+{
+	if (fd < 0)
+		return ;
+	write(fd, &c, 1);
+}
+
+void	ut_putnbr_fd(int n, int fd)
+{
+	unsigned int	nbr;
+
+	if (fd < 0)
+		return ;
+	if (n < 0)
+	{
+		ut_putchar_fd('-', fd);
+		nbr = (unsigned int)(n * -1);
+	}
+	else
+		nbr = (unsigned int)n;
+	if (nbr > 9)
+		ut_putnbr_fd(nbr / 10, fd);
+	ut_putchar_fd((nbr % 10) + '0', fd);
 }
