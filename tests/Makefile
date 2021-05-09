@@ -40,6 +40,10 @@ leak: re
 address: CFLAGS += -g -fsanitize=address
 address: re
 
+.PHONY: test
+test: $(NAME)
+	./$(NAME)
+
 .PHONY: clean
 clean:
 	$(RM) Makefile.bak $(NAME).dSYM $(OBJ)
