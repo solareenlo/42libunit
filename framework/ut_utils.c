@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 19:36:35 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 20:37:07 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 05:24:27 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ut_putstr_err(char *s)
 
 void	ut_putstr_status(char *name, char *res)
 {
-	ut_putstr_fd("\t > ", 1);
+	ut_putstr_fd("\t> ", 1);
 	ut_putstr_fd(name, 1);
 	ut_putstr_fd("\t: [", 1);
 	if (ut_strncmp(res, "OK", 3) == 0)

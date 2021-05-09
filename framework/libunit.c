@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:14:40 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 02:19:36 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 05:23:27 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ static int	_put_result(int total, int ok)
 {
 	if (total == ok)
 	{
-		printf("%s%d/%d tests checked%s\n", GREEN, ok, total, RESET);
+		printf("\t%s%d/%d tests checked%s\n", GREEN, ok, total, RESET);
 		return (0);
 	}
 	else
 	{
-		printf("%s%d/%d tests checked%s\n", RED, ok, total, RESET);
+		printf("\t%s%d/%d tests checked%s\n", RED, ok, total, RESET);
 		return (-1);
 	}
 }
