@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 03:44:29 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 05:22:36 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 05:16:16 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 05:17:14 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "atoi/ut_atoi.h"
-#include "bzero/ut_bzero.h"
-#include "calloc/ut_calloc.h"
-#include "isalnum/ut_isalnum.h"
+#include "ut_isalnum.h"
 
-static void	_put_header(void)
+int	isalnum_launcher(void)
 {
-	printf("*********************************\n");
-	printf("***      42 - Unit Tests      ***\n");
-	printf("*********************************\n");
-}
+	t_list_ut	*testlist;
 
-int	main(void)
-{
-	_put_header();
-	atoi_launcher();
-	bzero_launcher();
-	calloc_launcher();
-	isalnum_launcher();
+	testlist = NULL;
+	printf("ISALNUM\n");
+	ut_lstadd_back(&testlist, "isalnum basic test", &isalnum_basic);
+	return (launch_tests(&testlist));
 }
