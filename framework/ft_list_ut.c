@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:29:06 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 10:34:20 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/09 10:36:09 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ t_list_ut	*ft_lstnew_ut(char *name, int (*func)(void))
 
 void	ft_lstadd_back_ut(t_list_ut **testlist, char *name, int (*func)(void))
 {
-	t_list_ut	*tmp;
-
 	if (!testlist || !name || !func)
 		exit(ft_putstr_err("NULL parameter"));
 	if (*testlist)
