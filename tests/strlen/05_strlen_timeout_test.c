@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_strlen_ok_test.c                                :+:      :+:    :+:   */
+/*   05_strlen_timeout_test.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:02:16 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 16:44:41 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/09 16:51:55 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/09 16:52:21 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ut_strlen.h"
 
-int	strlen_ok_test(void)
+int	strlen_timeout_test(void)
 {
-	if (ft_strlen("Hello") == strlen("Hello"))
-		return (0);
-	else
-		return (-1);
+	while (42)
+		;
+	return (0);
 }

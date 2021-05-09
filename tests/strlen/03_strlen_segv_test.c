@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_strlen_ok_test.c                                :+:      :+:    :+:   */
+/*   03_strlen_segv_test.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:02:16 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 16:44:41 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/09 16:44:47 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/09 16:56:26 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ut_strlen.h"
 
-int	strlen_ok_test(void)
+int	strlen_sigsegv_test(void)
 {
-	if (ft_strlen("Hello") == strlen("Hello"))
+	if (ft_strlen(NULL) == strlen("42tokyo"))
 		return (0);
 	else
 		return (-1);
