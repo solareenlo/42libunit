@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   01_bzero_basic.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 03:44:29 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 04:31:02 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 04:20:08 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 04:32:36 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "atoi/ut_atoi.h"
-#include "bzero/ut_bzero.h"
+#include "ut_bzero.h"
 
-static void	_put_header(void)
+int	bzero_basic(void)
 {
-	printf("*********************************\n");
-	printf("***      42 - Unit Tests      ***\n");
-	printf("*********************************\n");
-}
+	char	s1[100];
+	char	s2[100];
 
-int	main(void)
-{
-	_put_header();
-	atoi_launcher();
-	bzero_launcher();
+	ft_bzero(s1, sizeof(s1));
+	bzero(s2, sizeof(s2));
+	if (strcmp(s1, s2) == 0)
+		return (0);
+	else
+		return (-1);
 }

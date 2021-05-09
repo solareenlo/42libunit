@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 03:44:29 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 04:31:02 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 04:17:59 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 04:30:25 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "atoi/ut_atoi.h"
-#include "bzero/ut_bzero.h"
+#include "ut_bzero.h"
 
-static void	_put_header(void)
+int	bzero_launcher(void)
 {
-	printf("*********************************\n");
-	printf("***      42 - Unit Tests      ***\n");
-	printf("*********************************\n");
-}
+	t_list_ut	*testlist;
 
-int	main(void)
-{
-	_put_header();
-	atoi_launcher();
-	bzero_launcher();
+	testlist = NULL;
+	printf("BZERO\n");
+	ut_lstadd_back(&testlist, "atoi basic test", &bzero_basic);
+	return (launch_tests(&testlist));
 }

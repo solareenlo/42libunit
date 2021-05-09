@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ut_bzero.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 03:44:29 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 04:31:02 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 04:19:24 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 04:31:27 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "atoi/ut_atoi.h"
-#include "bzero/ut_bzero.h"
+#ifndef UT_BZERO_H
+# define UT_BZERO_H
 
-static void	_put_header(void)
-{
-	printf("*********************************\n");
-	printf("***      42 - Unit Tests      ***\n");
-	printf("*********************************\n");
-}
+# include <strings.h>
+# include "../../framework/libunit.h"
+# include "../libft/libft.h"
 
-int	main(void)
-{
-	_put_header();
-	atoi_launcher();
-	bzero_launcher();
-}
+int	bzero_launcher(void);
+int	bzero_basic(void);
+
+#endif
