@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 04:17:59 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 04:30:25 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 05:09:58 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ int	bzero_launcher(void)
 
 	testlist = NULL;
 	printf("BZERO\n");
-	ut_lstadd_back(&testlist, "atoi basic test", &bzero_basic);
+	ut_lstadd_back(&testlist, "bzero basic test", &bzero_basic);
 	return (launch_tests(&testlist));
 }

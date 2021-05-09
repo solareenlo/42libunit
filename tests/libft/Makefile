@@ -61,4 +61,3 @@ source:
 	@echo HDR := `ls *.h` >> Makefile
 	@echo '' >> Makefile
 	@sed -n -e '/^# DO NOT ADD OR MODIFY/,$$p' < Makefile.bak >> Makefile
-
