@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ut_fpe.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:27:41 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 02:48:27 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 02:31:20 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 02:42:39 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef UT_FPE_H
+# define UT_FPE_H
 
-# include <unistd.h>
+# include "../../framework/libunit.h"
+# include "../libft/libft.h"
 
-size_t	ft_strlen(const char *s);
-double	ft_div_by_zero(int nbr);
+int	fpe_launcher(void);
+int	fpe_ok_test(void);
+int	fpe_fpe_test(void);
 
 #endif

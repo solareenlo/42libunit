@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_div_by_zero.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:27:41 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 02:48:27 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 02:39:05 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 02:49:39 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-
-size_t	ft_strlen(const char *s);
-double	ft_div_by_zero(int nbr);
-
-#endif
+double	ft_div_by_zero(int nbr)
+{
+	return (1 / (1 / nbr));
+}

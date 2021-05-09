@@ -1,10 +1,10 @@
-# Makefile for philo_one, updated Sun May  9 17:53:09 JST 2021
+# Makefile for philo_one, updated Mon May 10 02:50:09 JST 2021
 
 SRC := main.c
-SRC += libft/ft_strlen.c strlen/00_launcher.c strlen/01_strlen_ok_test.c strlen/02_strlen_ko_test.c strlen/03_strlen_segv_test.c strlen/04_strlen_buserr_test.c strlen/05_strlen_timeout_test.c
+SRC += fpe/00_launcher.c fpe/01_fpe_ok_test.c fpe/02_fpe_fpe_test.c libft/ft_div_by_zero.c libft/ft_strlen.c strlen/00_launcher.c strlen/01_strlen_ok_test.c strlen/02_strlen_ko_test.c strlen/03_strlen_segv_test.c strlen/04_strlen_buserr_test.c strlen/05_strlen_timeout_test.c
 
 OBJ := main.o
-OBJ += libft/ft_strlen.o strlen/00_launcher.o strlen/01_strlen_ok_test.o strlen/02_strlen_ko_test.o strlen/03_strlen_segv_test.o strlen/04_strlen_buserr_test.o strlen/05_strlen_timeout_test.o
+OBJ += fpe/00_launcher.o fpe/01_fpe_ok_test.o fpe/02_fpe_fpe_test.o libft/ft_div_by_zero.o libft/ft_strlen.o strlen/00_launcher.o strlen/01_strlen_ok_test.o strlen/02_strlen_ko_test.o strlen/03_strlen_segv_test.o strlen/04_strlen_buserr_test.o strlen/05_strlen_timeout_test.o
 
 # DO NOT ADD OR MODIFY ANY LINES ABOVE THIS -- run 'make source' to add files
 

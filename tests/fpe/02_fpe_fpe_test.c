@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   02_fpe_fpe_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:27:41 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 02:48:27 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 02:41:06 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 02:49:17 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ut_fpe.h"
 
-# include <unistd.h>
-
-size_t	ft_strlen(const char *s);
-double	ft_div_by_zero(int nbr);
-
-#endif
+int	fpe_fpe_test(void)
+{
+	if (ft_div_by_zero(2) == 0.0)
+		return (0);
+	else
+		return (-1);
+}
