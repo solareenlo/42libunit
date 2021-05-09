@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_basic_test.c                                    :+:      :+:    :+:   */
+/*   strlen_ut.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:02:16 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 11:05:32 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/09 10:52:45 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/09 11:32:10 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "strlen_ut.h"
+#ifndef STRLEN_UT_H
+# define STRLEN_UT_H
 
-int	basic_test(void)
-{
-	if (ft_strlen("Hello") == strlen("Hello"))
-		return (0);
-	else
-		return (-1);
-}
+# include <string.h>
+# include "../../framework/libunit.h"
+# include "../libft/libft.h"
+
+int	basic_test(void);
+
+#endif
