@@ -1,4 +1,4 @@
-# Makefile for philo_one, updated Sat May  8 23:24:19 JST 2021
+# Makefile for philo_one, updated Sun May  9 00:00:48 JST 2021
 
 SRC := libunit.c
 OBJ := libunit.o
