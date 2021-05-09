@@ -1,7 +1,7 @@
-# Makefile for philo_one, updated Sun May  9 10:35:59 JST 2021
+# Makefile for philo_one, updated Sun May  9 10:44:49 JST 2021
 
-SRC := ft_list_ut.c libft.c libunit.c
-OBJ := ft_list_ut.o libft.o libunit.o
+SRC := libunit.c ut_libft.c ut_list.c
+OBJ := libunit.o ut_libft.o ut_list.o
 
 HDR := libunit.h
 

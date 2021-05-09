@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_ut.c                                       :+:      :+:    :+:   */
+/*   ut_list.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:29:06 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 10:36:09 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/09 10:43:08 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-t_list_ut	*ft_lstlast_ut(t_list_ut *lst)
+t_list_ut	*ut_lstlast(t_list_ut *lst)
 {
 	if (!lst)
 		return (NULL);
 	if (!(lst->next))
 		return (lst);
-	return (ft_lstlast_ut(lst->next));
+	return (ut_lstlast(lst->next));
 }
 
-t_list_ut	*ft_lstnew_ut(char *name, int (*func)(void))
+t_list_ut	*ut_lstnew(char *name, int (*func)(void))
 {
 	t_list_ut	*new;
 
@@ -34,12 +34,12 @@ t_list_ut	*ft_lstnew_ut(char *name, int (*func)(void))
 	return (new);
 }
 
-void	ft_lstadd_back_ut(t_list_ut **testlist, char *name, int (*func)(void))
+void	ut_lstadd_back(t_list_ut **testlist, char *name, int (*func)(void))
 {
 	if (!testlist || !name || !func)
-		exit(ft_putstr_err("NULL parameter"));
+		exit(ut_putstr_err("NULL parameter"));
 	if (*testlist)
-		ft_lstlast_ut(*testlist)->next = ft_lstnew_ut(name, func);
+		ut_lstlast(*testlist)->next = ut_lstnew(name, func);
 	else
-		*testlist = ft_lstnew_ut(name, func);
+		*testlist = ut_lstnew(name, func);
 }
