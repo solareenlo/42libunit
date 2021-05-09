@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 21:12:10 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 21:34:16 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 02:27:28 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ void	_put_result(char *name, int status)
 			ut_putstr_status(name, "SEGV");
 		else if (WTERMSIG(status) == SIGBUS)
 			ut_putstr_status(name, "BUSE");
+		else if (WTERMSIG(status) == SIGFPE)
+			ut_putstr_status(name, "FPE");
 	}
 }
 
