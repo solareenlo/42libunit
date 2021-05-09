@@ -46,7 +46,7 @@ clean:
 
 .PHONY: fclean
 fclean: clean
-	make -C clean
+	make fclean -C $(LIBUNIT_DIR)
 	$(RM) $(NAME)
 
 .PHONY: re
