@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ut_libft.c                                         :+:      :+:    :+:   */
+/*   ut_libft1.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:21:08 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 10:57:00 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/09 20:33:45 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,19 @@ void	ut_putendl_fd(char *s, int fd)
 	ut_putchar_fd('\n', fd);
 }
 
-int	ut_putstr_err(char *s)
+int	ut_strncmp(const char *s1, const char *s2, size_t n)
 {
-	ut_putstr_fd("Error: ", 2);
-	ut_putstr_fd(s, 2);
-	ut_putstr_fd("\n", 2);
-	return (1);
+	unsigned char	u1;
+	unsigned char	u2;
+
+	while (n--)
+	{
+		u1 = (unsigned char)*(s1++);
+		u2 = (unsigned char)*(s2++);
+		if (u1 != u2)
+			return (u1 - u2);
+		if (u1 == '\0')
+			return (0);
+	}
+	return (0);
 }

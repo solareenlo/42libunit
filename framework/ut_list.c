@@ -6,19 +6,19 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:29:06 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 10:43:08 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/09 20:27:55 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-t_list_ut	*ut_lstlast(t_list_ut *lst)
+t_list_ut	*ut_lstlast(t_list_ut *list)
 {
-	if (!lst)
+	if (!list)
 		return (NULL);
-	if (!(lst->next))
-		return (lst);
-	return (ut_lstlast(lst->next));
+	if (!(list->next))
+		return (list);
+	return (ut_lstlast(list->next));
 }
 
 t_list_ut	*ut_lstnew(char *name, int (*func)(void))
@@ -34,12 +34,27 @@ t_list_ut	*ut_lstnew(char *name, int (*func)(void))
 	return (new);
 }
 
-void	ut_lstadd_back(t_list_ut **testlist, char *name, int (*func)(void))
+void	ut_lstadd_back(t_list_ut **list, char *name, int (*func)(void))
 {
-	if (!testlist || !name || !func)
+	if (!list || !name || !func)
 		exit(ut_putstr_err("NULL parameter"));
-	if (*testlist)
-		ut_lstlast(*testlist)->next = ut_lstnew(name, func);
+	if (*list == NULL)
+		*list = ut_lstnew(name, func);
 	else
-		*testlist = ut_lstnew(name, func);
+		ut_lstlast(*list)->next = ut_lstnew(name, func);
+}
+
+void	ut_lstclear(t_list_ut **lst)
+{
+	t_list_ut	*next;
+
+	if (!lst)
+		return ;
+	while (*lst)
+	{
+		next = (*lst)->next;
+		free(*lst);
+		*lst = next;
+	}
+	*lst = NULL;
 }

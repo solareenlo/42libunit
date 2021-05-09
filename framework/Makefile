@@ -1,7 +1,7 @@
-# Makefile for philo_one, updated Sun May  9 10:44:49 JST 2021
+# Makefile for philo_one, updated Sun May  9 20:34:20 JST 2021
 
-SRC := libunit.c ut_libft.c ut_list.c
-OBJ := libunit.o ut_libft.o ut_list.o
+SRC := libunit.c ut_libft.c ut_list.c ut_utils.c
+OBJ := libunit.o ut_libft.o ut_list.o ut_utils.o
 
 HDR := libunit.h
 
@@ -10,7 +10,7 @@ HDR := libunit.h
 NAME := libunit.a
 
 CC := gcc
-CFLAGS := -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS := -Wall -Wextra -Werror
 LIB := ar -rcs
 RM := rm -fr
 

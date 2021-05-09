@@ -12,7 +12,7 @@ NAME := unit_test
 NAME_LIBUNIT := libunit.a
 
 CC := gcc
-CFLAGS := -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS := -Wall -Wextra -Werror
 RM := rm -fr
 
 LIBUNIT_DIR := ../framework
