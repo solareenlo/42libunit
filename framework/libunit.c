@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:14:40 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 16:36:47 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/09 17:35:25 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	run_tests(t_list_ut **testlist)
 {
+	(void)testlist;
 	return (0);
 }
 
