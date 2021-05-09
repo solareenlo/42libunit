@@ -6,7 +6,14 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:49:00 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 11:12:38 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/09 16:31:21 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "strlen/ut_strlen.h"
+
+int	main(void)
+{
+	strlen_launcher();
+	return (0);
+}
