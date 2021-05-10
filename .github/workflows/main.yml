@@ -34,7 +34,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: make test -C tests
-        run: make test -C tests
       - name: make test -C real-tests
         run: make test -C real-tests
