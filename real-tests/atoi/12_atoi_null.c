@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 04:07:19 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 04:07:37 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 13:28:13 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	atoi_null(void)
 {
-	if (ft_atoi(NULL) == atoi(NULL))
+	if (ft_atoi("(null)") == atoi("(null)"))
 		return (0);
 	else
 		return (-1);
