@@ -22,7 +22,7 @@ LIBUNIT := $(addprefix $(LIBUNIT_DIR)/, $(NAME_LIBUNIT))
 all: $(NAME)
 
 # Linking
-$(NAME): $(LIBUNIT) $(OBJ)
+$(NAME): $(OBJ) $(LIBUNIT)
 	$(CC) $(CFLAGS) -o $@ $^
 
 $(LIBUNIT):
