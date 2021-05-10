@@ -13,7 +13,7 @@
 #ifndef UT_CALLOC_H
 # define UT_CALLOC_H
 
-# include <strings.h>
+# include <string.h>
 # include "../../framework/libunit.h"
 # include "../libft/libft.h"
 
