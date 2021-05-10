@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   02_isalnum_mod_256.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 05:16:16 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 11:21:45 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 11:20:35 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 11:22:05 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ut_isalnum.h"
 
-int	isalnum_launcher(void)
+int	isalnum_mod_256(void)
 {
-	t_list_ut	*testlist;
-
-	testlist = NULL;
-	printf("ISALNUM\n");
-	ut_lstadd_back(&testlist, "isalnum basic test", &isalnum_basic);
-	ut_lstadd_back(&testlist, "isalnum mod 256 test", &isalnum_mod_256);
-	return (launch_tests(&testlist));
+	if (ft_isalnum(256 + 60) == isalnum(256 + 60))
+		return (0);
+	else
+		return (-1);
 }

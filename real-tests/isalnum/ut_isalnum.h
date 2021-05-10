@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 05:17:20 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 05:21:49 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 11:22:10 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@
 
 int	isalnum_launcher(void);
 int	isalnum_basic(void);
+int	isalnum_mod_256(void);
 
 #endif
