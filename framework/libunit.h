@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:14:35 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 21:13:30 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 12:27:08 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <sys/wait.h>
+# include <sygnal.h>
 # include <unistd.h>
 
 # define TIMEOUT 2
