@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 03:44:29 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 11:31:53 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 19:17:48 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "calloc/ut_calloc.h"
 #include "isalnum/ut_isalnum.h"
 #include "strchr/ut_strchr.h"
+#include "memset/ut_memset.h"
 
 static void	_put_header(void)
 {
@@ -31,4 +32,5 @@ int	main(void)
 	calloc_launcher();
 	isalnum_launcher();
 	strchr_launcher();
+	memset_launcher();
 }

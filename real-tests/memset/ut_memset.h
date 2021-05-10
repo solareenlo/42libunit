@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   ut_memset.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 19:14:17 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 19:15:02 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 19:15:11 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 19:17:00 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ut_memset.h"
+#ifndef UT_MEMSET_H
+# define UT_MEMSET_H
 
-int	memset_launcher(void)
-{
-	t_list_ut	*testlist;
+# include <string.h>
+# include "../../framework/libunit.h"
+# include "../libft/libft.h"
 
-	testlist = NULL;
-	printf("MEMSET\n");
-	ut_lstadd_back(&testlist, "memset basic test", &memset_basic);
-	return (launch_tests(&testlist));
-}
+int	memset_launcher(void);
+int	memset_basic(void);
+
+#endif
