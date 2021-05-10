@@ -35,6 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: make test -C tests
-        run: |
-          cd tests
-          make test
+        run: make test -C tests
+      - name: make test -C resl-tests
+        run: make test -C resl-tests
