@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 03:44:29 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 20:18:51 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 19:58:07 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 19:59:11 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "atoi/ut_atoi.h"
-#include "bzero/ut_bzero.h"
-#include "calloc/ut_calloc.h"
-#include "isalnum/ut_isalnum.h"
-#include "strchr/ut_strchr.h"
-#include "memset/ut_memset.h"
-#include "memccpy/ut_memccpy.h"
+#include "ut_memccpy.h"
 
-int	main(void)
+int	memccpy_launcher(void)
 {
-	ut_put_header();
-	atoi_launcher();
-	bzero_launcher();
-	calloc_launcher();
-	isalnum_launcher();
-	strchr_launcher();
-	memset_launcher();
-	memccpy_launcher();
+	t_list_ut	*testlist;
+
+	testlist = NULL;
+	printf("MEMCCPY\n");
+	ut_lstadd_back(&testlist, "memccpy basic test", &memccpy_basic);
+	return (launch_tests(&testlist));
 }

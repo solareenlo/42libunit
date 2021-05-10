@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   01_memccpy_basic.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 03:44:29 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 20:18:51 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 20:00:06 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 20:22:24 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "atoi/ut_atoi.h"
-#include "bzero/ut_bzero.h"
-#include "calloc/ut_calloc.h"
-#include "isalnum/ut_isalnum.h"
-#include "strchr/ut_strchr.h"
-#include "memset/ut_memset.h"
-#include "memccpy/ut_memccpy.h"
+#include "ut_memccpy.h"
 
-int	main(void)
+int	memccpy_basic(void)
 {
-	ut_put_header();
-	atoi_launcher();
-	bzero_launcher();
-	calloc_launcher();
-	isalnum_launcher();
-	strchr_launcher();
-	memset_launcher();
-	memccpy_launcher();
+	char	*s;
+	char	*s1;
+	char	*s2;
+
+	s = STR;
+	s1 = calloc(strlen(STR), sizeof(char));
+	s2 = calloc(strlen(STR), sizeof(char));
+	ft_memccpy(s1, s, 0, 3);
+	memccpy(s2, s, 0, 3);
+	if (strcmp(s1, s2) == 0)
+	{
+		free(s1);
+		free(s2);
+		return (0);
+	}
+	else
+	{
+		free(s1);
+		free(s2);
+		return (-1);
+	}
 }
