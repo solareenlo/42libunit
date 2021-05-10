@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 19:36:35 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 05:24:27 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 19:42:00 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,11 @@ void	ut_putstr_status(char *name, char *res)
 	ut_putstr_fd(res, 1);
 	ut_putstr_fd(RESET, 1);
 	ut_putstr_fd("]\n", 1);
+}
+
+void	ut_put_header(void)
+{
+	printf("*********************************\n");
+	printf("***      42 - Unit Tests      ***\n");
+	printf("*********************************\n");
 }

@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:14:35 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 12:28:32 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 19:42:18 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_list_ut
 int			launch_tests(t_list_ut **testlist);
 void		ut_run_child(t_list_ut *test);
 void		ut_run_parent(t_list_ut *test, int *passed);
+void		ut_put_header(void);
 void		ut_putstr_status(char *name, char *res);
 int			ut_putstr_err(char *s);
 

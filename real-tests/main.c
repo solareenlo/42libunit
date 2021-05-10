@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 03:44:29 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 19:37:27 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 19:42:24 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@
 
 int	main(void)
 {
-	printf("*********************************\n");
-	printf("***      42 - Unit Tests      ***\n");
-	printf("*********************************\n");
+	ut_put_header();
 	atoi_launcher();
 	bzero_launcher();
 	calloc_launcher();
