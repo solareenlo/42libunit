@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   11_atoi_null_terminated.c                          :+:      :+:    :+:   */
+/*   11_atoi_null_term.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 04:06:19 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 04:06:42 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 11:44:29 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ut_atoi.h"
 
-int	atoi_null_terminated(void)
+int	atoi_null_term(void)
 {
 	if (ft_atoi("") == atoi(""))
 		return (0);

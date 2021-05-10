@@ -6,10 +6,9 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 03:38:11 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 04:07:51 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 11:45:20 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef UT_ATOI_H
 # define UT_ATOI_H
@@ -29,7 +28,7 @@ int	atoi_int_min(void);
 int	atoi_long_max(void);
 int	atoi_long_min(void);
 int	atoi_zero_zero(void);
-int	atoi_null_terminated(void);
+int	atoi_null_term(void);
 int	atoi_null(void);
 
 #endif

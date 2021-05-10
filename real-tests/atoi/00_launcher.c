@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 03:37:07 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 04:08:01 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 11:43:39 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	atoi_launcher(void)
 	ut_lstadd_back(&testlist, "atoi LONG MAX test", &atoi_long_max);
 	ut_lstadd_back(&testlist, "atoi LONG MIN test", &atoi_long_min);
 	ut_lstadd_back(&testlist, "atoi zero zero test", &atoi_zero_zero);
-	ut_lstadd_back(&testlist, "atoi null terminated test", &atoi_null_terminated);
+	ut_lstadd_back(&testlist, "atoi null term test", &atoi_null_term);
 	ut_lstadd_back(&testlist, "atoi null test", &atoi_null);
 	return (launch_tests(&testlist));
 }
