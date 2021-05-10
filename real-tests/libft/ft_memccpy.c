@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 03:54:02 by tayamamo          #+#    #+#             */
-/*   Updated: 2020/06/28 14:59:21 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 11:53:59 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,11 @@ void	*ft_memccpy(void *dst, const void *src, int val, size_t n)
 		s = src;
 		c = val;
 		while (n--)
-			if ((*(d++) = *(s++)) == c)
+		{
+			*(d++) = *(s++);
+			if (*(d - 1) == c)
 				return (d);
+		}
 	}
 	return (NULL);
 }

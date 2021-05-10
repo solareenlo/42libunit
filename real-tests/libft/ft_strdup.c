@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 08:13:05 by tayamamo          #+#    #+#             */
-/*   Updated: 2020/07/17 06:37:46 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 11:51:02 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strdup(const char *s)
 	char	*copy;
 
 	len = ft_strlen(s) + 1;
-	if (!(copy = (char *)malloc(sizeof(char) * len)))
+	copy = (char *)malloc(sizeof(char) * len);
+	if (!copy)
 		return (NULL);
 	ft_memcpy(copy, s, len);
 	return (copy);

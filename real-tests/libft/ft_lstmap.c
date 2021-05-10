@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 10:08:54 by tayamamo          #+#    #+#             */
-/*   Updated: 2020/07/01 19:53:52 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 11:53:20 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	res = NULL;
 	while (lst)
 	{
-		if (!(tail = ft_lstnew(f(lst->content))))
+		tail = ft_lstnew(f(lst->content));
+		if (!tail)
 		{
 			if (!del)
 				return (NULL);

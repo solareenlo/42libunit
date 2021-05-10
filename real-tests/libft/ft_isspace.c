@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 13:53:52 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 11:51:30 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 11:48:01 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/10 11:48:13 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	ft_isspace(int c)
 {
-	char	*res;
-	int		i;
-
-	if (!s || !f)
-		return (NULL);
-	res = ft_strdup(s);
-	if (res == NULL)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		res[i] = f(i, (char)s[i]);
-		i++;
-	}
-	res[i] = '\0';
-	return (res);
+	if (c == '\t')
+		return (1);
+	if (c == '\n')
+		return (1);
+	if (c == '\v')
+		return (1);
+	if (c == '\f')
+		return (1);
+	if (c == '\r')
+		return (1);
+	if (c == ' ')
+		return (1);
+	return (0);
 }
