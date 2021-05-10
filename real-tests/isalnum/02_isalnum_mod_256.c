@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 11:20:35 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 11:22:05 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/10 19:34:38 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	isalnum_mod_256(void)
 {
-	if (ft_isalnum(256 + 60) == isalnum(256 + 60))
+	if (!ft_isalnum(256 + 60) == !isalnum(256 + 60))
 		return (0);
 	else
 		return (-1);
