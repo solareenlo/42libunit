@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 21:12:10 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 02:27:28 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/11 12:09:17 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ void	_put_result(char *name, int status)
 	}
 }
 
-void	ut_run_parent(t_list_ut *test, int *passed)
+void	ut_run_parent(t_list_ut *test, int *ok)
 {
 	int	status;
 
 	wait(&status);
 	if (WIFEXITED(status) && WEXITSTATUS(status) == 0)
-		(*passed)++;
+		(*ok)++;
 	_put_result(test->name, status);
 }
