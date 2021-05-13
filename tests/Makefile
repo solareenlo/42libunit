@@ -42,7 +42,7 @@ address: re
 
 .PHONY: test
 test: $(NAME)
-	./$(NAME)
+	./$(NAME) || :
 
 .PHONY: clean
 clean:
