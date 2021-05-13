@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 03:44:29 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 20:18:51 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/13 11:40:04 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,23 @@
 
 int	main(void)
 {
+	int	status;
+
 	ut_put_header();
-	atoi_launcher();
-	bzero_launcher();
-	calloc_launcher();
-	isalnum_launcher();
-	strchr_launcher();
-	memset_launcher();
-	memccpy_launcher();
+	status = 0;
+	if (atoi_launcher() == -1)
+		status = 1;
+	if (bzero_launcher() == -1)
+		status = 1;
+	if (calloc_launcher() == -1)
+		status = 1;
+	if (isalnum_launcher() == -1)
+		status = 1;
+	if (strchr_launcher() == -1)
+		status = 1;
+	if (memset_launcher() == -1)
+		status = 1;
+	if (memccpy_launcher() == -1)
+		status = 1;
+	return (status);
 }

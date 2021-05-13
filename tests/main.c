@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:49:00 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 19:42:39 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/13 11:45:03 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 
 int	main(void)
 {
+	int	status;
+
 	ut_put_header();
-	strlen_launcher();
-	fpe_launcher();
-	return (0);
+	status = 0;
+	if (strlen_launcher() == -1)
+		status = 1;
+	if (fpe_launcher() == -1)
+		status = 1;
+	return (status);
 }
