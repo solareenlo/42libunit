@@ -6,12 +6,12 @@
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 12:25:55 by mkamei            #+#    #+#             */
-/*   Updated: 2021/05/13 12:28:33 by mkamei           ###   ########.fr       */
+/*   Updated: 2021/05/13 13:07:00 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UT_CREATE_MSG
-# define UT_CREATE_MSG
+#ifndef UT_CREATE_MSG_H
+# define UT_CREATE_MSG_H
 
 # include <string.h>
 # include "../../framework/libunit.h"
