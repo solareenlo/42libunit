@@ -16,9 +16,15 @@
 
 int	main(void)
 {
+	int	status;
+
 	ut_put_header();
-	strlen_launcher();
-	fpe_launcher();
-	create_msg_launcher();
-	return (0);
+	status = 0;
+	if (strlen_launcher() == -1)
+		status = 1;
+	if (fpe_launcher() == -1)
+		status = 1;
+  if (create_msg_launcher() == -1)
+    status = 1;
+	return (status);
 }
