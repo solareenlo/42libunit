@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   01_create_msg_basic_test.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:27:41 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/13 12:32:34 by mkamei           ###   ########.fr       */
+/*   Created: 2021/05/13 12:30:34 by mkamei            #+#    #+#             */
+/*   Updated: 2021/05/13 12:36:53 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ut_create_msg.h"
 
-# include <unistd.h>
-
-size_t	ft_strlen(const char *s);
-double	ft_div_by_zero(int nbr);
-char	*ft_create_msg(int score);
-
-#endif
+int	create_msg_basic_test(void)
+{
+	if (strcmp(ft_create_msg(3), "score :3/5") == 0)
+		return (0);
+	else
+		return (-1);
+}

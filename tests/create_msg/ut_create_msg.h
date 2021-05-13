@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ut_create_msg.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:27:41 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/13 12:32:34 by mkamei           ###   ########.fr       */
+/*   Created: 2021/05/13 12:25:55 by mkamei            #+#    #+#             */
+/*   Updated: 2021/05/13 12:28:33 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef UT_CREATE_MSG
+# define UT_CREATE_MSG
 
-# include <unistd.h>
+# include <string.h>
+# include "../../framework/libunit.h"
+# include "../libft/libft.h"
 
-size_t	ft_strlen(const char *s);
-double	ft_div_by_zero(int nbr);
-char	*ft_create_msg(int score);
+int	create_msg_launcher(void);
+int	create_msg_basic_test(void);
 
 #endif
