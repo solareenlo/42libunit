@@ -6,7 +6,7 @@
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:49:00 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/13 12:38:47 by mkamei           ###   ########.fr       */
+/*   Updated: 2021/05/13 15:26:48 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,15 @@
 
 int	main(void)
 {
+	int	status;
+
 	ut_put_header();
-	strlen_launcher();
-	fpe_launcher();
-	create_msg_launcher();
-	return (0);
+	status = 0;
+	if (strlen_launcher() == -1)
+		status = 1;
+	if (fpe_launcher() == -1)
+		status = 1;
+	if (create_msg_launcher() == -1)
+		status = 1;
+	return (status);
 }
