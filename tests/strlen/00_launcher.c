@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:48:35 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 20:32:15 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/14 10:04:38 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ int	strlen_launcher(void)
 
 	testlist = NULL;
 	ut_putstr_fd("STRLEN:\n", 1);
-	ut_lstadd_back(&testlist, "strlen ok test", &strlen_ok_test);
+	ut_lstadd_back(&testlist, "strlen basic test", &strlen_basic_test);
 	ut_lstadd_back(&testlist, "strlen ko test", &strlen_ko_test);
-	ut_lstadd_back(&testlist, "strlen segv test", &strlen_sigsegv_test);
-	ut_lstadd_back(&testlist, "strlen bus test", &strlen_sigbus_test);
-	ut_lstadd_back(&testlist, "strlen timeout test", &strlen_timeout_test);
+	ut_lstadd_back(&testlist, "strlen NULL test", &strlen_null_test);
 	return (launch_tests(&testlist));
 }

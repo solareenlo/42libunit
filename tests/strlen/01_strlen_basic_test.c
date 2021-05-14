@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_strlen_buserr_test.c                            :+:      :+:    :+:   */
+/*   01_strlen_basic_test.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 16:46:31 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 20:42:20 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/09 11:02:16 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/14 10:08:20 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ut_strlen.h"
 
-int	strlen_sigbus_test(void)
+int	strlen_basic_test(void)
 {
-	char	*s;
-
-	s = STRING;
-	s[0] = '4';
-	if (ft_strlen(s) == strlen("42tokyo"))
+	if (ft_strlen("Hello") == strlen("Hello"))
 		return (0);
 	else
 		return (-1);

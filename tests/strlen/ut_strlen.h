@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ut_strlen.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:52:45 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 20:41:45 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/14 10:05:06 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,9 @@
 # include "../../framework/libunit.h"
 # include "../libft/libft.h"
 
-# define STRING "42tokyo"
-
 int	strlen_launcher(void);
-int	strlen_ok_test(void);
+int	strlen_basic_test(void);
 int	strlen_ko_test(void);
-int	strlen_sigsegv_test(void);
-int	strlen_sigbus_test(void);
-int	strlen_timeout_test(void);
+int	strlen_null_test(void);
 
 #endif
