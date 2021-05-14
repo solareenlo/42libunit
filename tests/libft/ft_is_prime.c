@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:27:41 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/14 09:34:41 by mkamei           ###   ########.fr       */
+/*   Created: 2021/05/14 09:29:59 by mkamei            #+#    #+#             */
+/*   Updated: 2021/05/14 09:30:15 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	ft_is_prime(int nb)
+{
+	int	x;
 
-# include <unistd.h>
-
-size_t	ft_strlen(const char *s);
-double	ft_div_by_zero(int nbr);
-char	*ft_create_msg(int score);
-int		ft_is_prime(int nb);
-
-#endif
+	if (nb <= 1)
+		return (0);
+	x = 2;
+	while (x < nb)
+	{
+		if (nb % x == 0)
+			return (0);
+		x++;
+	}
+	return (1);
+}

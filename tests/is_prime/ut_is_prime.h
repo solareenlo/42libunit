@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ut_is_prime.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:27:41 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/14 09:34:41 by mkamei           ###   ########.fr       */
+/*   Created: 2021/05/14 09:27:50 by mkamei            #+#    #+#             */
+/*   Updated: 2021/05/14 09:28:21 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef UT_IS_PRIME_H
+# define UT_IS_PRIME_H
 
-# include <unistd.h>
+# include <string.h>
+# include "../../framework/libunit.h"
+# include "../libft/libft.h"
 
-size_t	ft_strlen(const char *s);
-double	ft_div_by_zero(int nbr);
-char	*ft_create_msg(int score);
-int		ft_is_prime(int nb);
+int	is_prime_launcher(void);
+int	is_prime_basic_test(void);
+int	is_prime_bigger_test(void);
 
 #endif

@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   02_is_prime_bigger_test.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:27:41 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/14 09:34:41 by mkamei           ###   ########.fr       */
+/*   Created: 2021/05/14 09:28:39 by mkamei            #+#    #+#             */
+/*   Updated: 2021/05/14 09:33:29 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ut_is_prime.h"
 
-# include <unistd.h>
-
-size_t	ft_strlen(const char *s);
-double	ft_div_by_zero(int nbr);
-char	*ft_create_msg(int score);
-int		ft_is_prime(int nb);
-
-#endif
+int	is_prime_bigger_test(void)
+{
+	if (ft_is_prime(2147483647) == 1)
+		return (0);
+	else
+		return (-1);
+}

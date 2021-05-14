@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   01_is_prime_basic_test.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 11:27:41 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/14 09:34:41 by mkamei           ###   ########.fr       */
+/*   Created: 2021/05/14 09:26:29 by mkamei            #+#    #+#             */
+/*   Updated: 2021/05/14 09:27:38 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ut_is_prime.h"
 
-# include <unistd.h>
-
-size_t	ft_strlen(const char *s);
-double	ft_div_by_zero(int nbr);
-char	*ft_create_msg(int score);
-int		ft_is_prime(int nb);
-
-#endif
+int	is_prime_basic_test(void)
+{
+	if (ft_is_prime(13) == 1)
+		return (0);
+	else
+		return (-1);
+}
