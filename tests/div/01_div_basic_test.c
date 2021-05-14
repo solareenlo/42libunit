@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_by_zero.c                                   :+:      :+:    :+:   */
+/*   01_div_basic_test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 02:39:05 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 02:49:39 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 02:32:49 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/14 09:42:34 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ut_div.h"
 
-double	ft_div_by_zero(int nbr)
+int	div_basic_test(void)
 {
-	return (1 / (1 / nbr));
+	if (ft_div(10, 5) == 10 / 5)
+		return (0);
+	else
+		return (-1);
 }

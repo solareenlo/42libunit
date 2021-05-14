@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_fpe_ok_test.c                                   :+:      :+:    :+:   */
+/*   ft_div.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 02:32:49 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 02:42:34 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/05/10 02:39:05 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/05/14 09:48:09 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ut_fpe.h"
+#include "libft.h"
 
-int	fpe_ok_test(void)
+double	ft_div(int nbr1, int nbr2)
 {
-	if ((float)(1 / 1 / 2) == 0)
-		return (0);
-	else
-		return (-1);
+	return (nbr1 / nbr2);
 }

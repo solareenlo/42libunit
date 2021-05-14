@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 02:29:55 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 02:43:28 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/14 10:01:22 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ut_fpe.h"
+#include "ut_div.h"
 
-int	fpe_launcher(void)
+int	div_launcher(void)
 {
 	t_list_ut	*testlist;
 
 	testlist = NULL;
-	printf("FPE\n");
-	ut_lstadd_back(&testlist, "fpe ok test", &fpe_ok_test);
-	ut_lstadd_back(&testlist, "fpe fpe test", &fpe_fpe_test);
+	printf("DIV:\n");
+	ut_lstadd_back(&testlist, "div basic test", &div_basic_test);
+	ut_lstadd_back(&testlist, "div zero test	", &div_zero_test);
 	return (launch_tests(&testlist));
 }

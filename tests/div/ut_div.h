@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ut_fpe.h                                           :+:      :+:    :+:   */
+/*   ut_div.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 02:31:20 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 02:42:39 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/14 09:56:04 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UT_FPE_H
-# define UT_FPE_H
+#ifndef UT_DIV_H
+# define UT_DIV_H
 
 # include "../../framework/libunit.h"
 # include "../libft/libft.h"
 
-int	fpe_launcher(void);
-int	fpe_ok_test(void);
-int	fpe_fpe_test(void);
+int	div_launcher(void);
+int	div_basic_test(void);
+int	div_zero_test(void);
 
 #endif

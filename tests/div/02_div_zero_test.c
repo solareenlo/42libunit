@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   02_fpe_fpe_test.c                                  :+:      :+:    :+:   */
+/*   02_div_zero_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 02:41:06 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 02:49:17 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/14 09:56:12 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ut_fpe.h"
+#include "ut_div.h"
 
-int	fpe_fpe_test(void)
+int	div_zero_test(void)
 {
-	if (ft_div_by_zero(2) == 0.0)
+	if (ft_div(10, 0) == 2147483647)
 		return (0);
 	else
 		return (-1);
