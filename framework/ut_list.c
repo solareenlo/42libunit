@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ut_list.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:29:06 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/09 20:27:55 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/14 10:14:18 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,13 @@ t_list_ut	*ut_lstnew(char *name, int (*func)(void))
 
 void	ut_lstadd_back(t_list_ut **list, char *name, int (*func)(void))
 {
-	if (!list || !name || !func)
+	if (!list)
 		exit(ut_putstr_err("NULL parameter"));
+	if (!name || !func)
+	{
+		ut_lstclear(list);
+		exit(ut_putstr_err("NULL parameter"));
+	}
 	if (*list == NULL)
 		*list = ut_lstnew(name, func);
 	else

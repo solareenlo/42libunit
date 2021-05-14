@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libunit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 10:14:40 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/10 05:23:27 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/14 10:12:49 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,10 @@ int	_run_tests(t_list_ut **testlist)
 	{
 		pid = fork();
 		if (pid == -1)
+		{
+			ut_lstclear(&head);
 			exit(ut_putstr_err("fork failed"));
+		}
 		else if (pid == 0)
 			ut_run_child(*testlist);
 		else

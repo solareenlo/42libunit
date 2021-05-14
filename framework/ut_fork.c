@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ut_fork.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 21:12:10 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/11 12:09:17 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/14 10:13:31 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	_timeout(int sig)
 
 void	ut_run_child(t_list_ut *test)
 {
-	if (test == NULL)
-		exit(ut_putstr_err("There is no test!"));
 	signal(SIGALRM, _timeout);
 	alarm(TIMEOUT);
 	if (test->func() == 0)
@@ -32,8 +30,6 @@ void	ut_run_child(t_list_ut *test)
 
 void	_put_result(char *name, int status)
 {
-	if (name == NULL)
-		exit(ut_putstr_err("Test name is NULL."));
 	if (WIFEXITED(status))
 	{
 		if (WEXITSTATUS(status) == 0)
