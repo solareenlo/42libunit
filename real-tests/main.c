@@ -6,7 +6,7 @@
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 03:44:29 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/13 11:40:04 by mkamei           ###   ########.fr       */
+/*   Updated: 2021/05/16 20:01:41 by tayamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	main(void)
 {
 	int	status;
 
+	setbuf(stdout, NULL);
 	ut_put_header();
 	status = 0;
 	if (atoi_launcher() == -1)
