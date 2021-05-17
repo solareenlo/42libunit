@@ -47,6 +47,8 @@ void	_put_result(char *name, int status)
 			ut_putstr_status(name, "BUSE");
 		else if (WTERMSIG(status) == SIGFPE)
 			ut_putstr_status(name, "FPE");
+		else
+			ut_putstr_status(name, "UNKNOWN SIGNAL");
 	}
 }
 
